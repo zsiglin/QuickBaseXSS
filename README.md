@@ -30,15 +30,15 @@ $.ajax({
 ```
 
 ##Form Text Element Injection
-Need to run some custom JavaScript on a QuickBase form? No problem!
+Need to run some custom JavaScript on a particular QuickBase form? No problem!
 
 #####How does it work?
 Paste the snippet below into a QuickBase form text element and you're all set.
 
 #####Why does it work?
-This one works for two reasons:
-1. Omiting the closing tag on the iframe element allows us to bypass the regex that QuickBase is presumably using to filter out unwanted text. 
-2. Modern day rendering engines make an attempt to fix mistakes like unclosed tags.
+This one works for a couple of reasons:
+- Omiting the closing tag on the iframe element allows us to skirt the regex that QuickBase is presumably using to filter out unwanted text. 
+- Modern day rendering engines make an attempt to fix mistakes like unclosed tags.
 
 ```
 <iframe src="javascript: alert('HELLO!')" style="display: none"
