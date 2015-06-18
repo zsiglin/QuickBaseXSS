@@ -37,7 +37,7 @@ Paste the snippet below into a QuickBase form text element and you're all set.
 
 #####Why does it work?
 This one works for a couple of reasons:
-- Omiting the closing tag on the iframe element allows us to skirt the regex that QuickBase is presumably using to filter out unwanted text. 
+- Omitting the closing tag on the iframe element allows us to skirt the regex that QuickBase is presumably using to filter out unwanted text. 
 - Modern day rendering engines make an attempt to fix mistakes like unclosed tags.
 
 ```
