@@ -2,7 +2,7 @@
 This repository documents XSS injection vectors I've discovered in the QuickBase platform (http://www.quickbase.com).
 
 ##Branding Page Injection
-This one requires admin privileges, so it isn't a major vulnerability. Why, then, is it interesting? *It allows arbitrary code to run application wide!* I see this being way more useful than nefarious.
+This one requires admin privileges, so it isn't a major vulnerability. Why, then, is it interesting? *It allows arbitrary code to run application wide!*
 
 #####How does it work?
 Run the JavaScript below in your developer console while on the dashboard of the application you want to affect. It will issue a POST to the SaveAppSettingsBrandGuide action.
@@ -27,4 +27,19 @@ $.ajax({
     apply: "Save"
   }
 });
+```
+
+##Form Text Element Injection
+Need to run some custom JavaScript on a QuickBase form? No problem!
+
+#####How does it work?
+Paste the snippet below into a QuickBase form text element and you're all set.
+
+#####Why does it work?
+This one works for two reasons:
+1. Omiting the closing tag on the iframe element allows us to bypass the regex that QuickBase is presumably using to filter out unwanted text. 
+2. Modern day rendering engines make an attempt to fix mistakes like unclosed tags.
+
+```
+<iframe src="javascript: alert('HELLO!')" style="display: none"
 ```
