@@ -7,7 +7,7 @@ This one requires admin privileges, so it isn't a major vulnerability. Why, then
 #####How does it work?
 Run the JavaScript below in your developer console while on the dashboard of the application you want to affect. It will issue a POST to the SaveAppSettingsBrandGuide action.
 
-```
+```javascript
 var DBID = "";
 var REALM = "";
 var SCRIPT = "alert('HELLO!');";
@@ -35,7 +35,7 @@ Need to run some custom JavaScript on a particular QuickBase form? No problem!
 #####How does it work?
 Paste the snippet below into a QuickBase form text element and you're all set.
 
-```
+```html
 <iframe src="javascript: alert('HELLO!')" style="display: none"
 ```
 
