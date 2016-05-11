@@ -17,7 +17,7 @@ $.ajax({
   url: "https://" + REALM + ".quickbase.com/db/" + DBID + "?a=SaveAppSettingsBrandGuide",
   type: "POST",
   data: {
-    uiCustomTextColor: "</style><script>" + script + "</script><style>",
+    uiCustomTextColor: "</style><script>" + SCRIPT + "</script><style>",
     PageToken: TOKEN,
     CustomHeader: "on",
     uiCustomHeaderOptions: "iBasic",
